@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/API/" />
+  <Folder Name="/src/Core/">
+    <Project Path="HRLeaveManagement.Application/HRLeaveManagement.Application.csproj" Id="605f1055-06fd-4fd7-928e-249404de3495" />
+    <Project Path="HRLeaveManagement.Domain/HRLeaveManagement.Domain.csproj" Id="68bd953a-4c39-4d1d-a870-ccc1d38ab302" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/" />
+  <Folder Name="/src/UI/" />
+  <Folder Name="/tests/" />
+</Solution>
