@@ -1,10 +1,11 @@
-﻿using HRLeaveManagement.Domain;
+﻿using HRLeaveManagement.Application.Contracts.Persistence;
+using HRLeaveManagement.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRLeaveManagement.Application.Persistence.Contracts
+namespace HRLeaveManagement.Application.Contracts.Persistence
 {
    public interface ILeaveRequestRepository : IGenericRepository<LeaveRequest>
     {
