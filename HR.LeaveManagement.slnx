@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/src/" />
-  <Folder Name="/src/API/" />
+  <Folder Name="/src/API/">
+    <Project Path="HR.LeaveManagement.API/HR.LeaveManagement.API.csproj" />
+  </Folder>
   <Folder Name="/src/Core/">
     <Project Path="HRLeaveManagement.Application/HRLeaveManagement.Application.csproj" Id="605f1055-06fd-4fd7-928e-249404de3495" />
     <Project Path="HRLeaveManagement.Domain/HRLeaveManagement.Domain.csproj" Id="68bd953a-4c39-4d1d-a870-ccc1d38ab302" />
@@ -9,6 +11,8 @@
     <Project Path="HR.LeaveManagement.Infrastructure/HR.LeaveManagement.Infrastructure.csproj" Id="fceba434-bcd2-43fc-a2c1-9e60a5fe52c1" />
     <Project Path="HR.LeaveManagement.Persistence/HR.LeaveManagement.Persistence.csproj" Id="d0c56c59-43c7-4250-876e-9051fba705b8" />
   </Folder>
-  <Folder Name="/src/UI/" />
+  <Folder Name="/src/UI/">
+    <Project Path="HR.LeaveManagement.MVC/HR.LeaveManagement.MVC.csproj" Id="40707824-2d87-4d54-b7d8-b75b6955b43a" />
+  </Folder>
   <Folder Name="/tests/" />
 </Solution>
