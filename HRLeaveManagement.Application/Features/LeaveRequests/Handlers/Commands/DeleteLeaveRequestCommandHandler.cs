@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HRLeaveManagement.Application.Exceptions;
 using HRLeaveManagement.Application.Features.LeaveRequests.Requests.Commands;
-using HRLeaveManagement.Application.Persistence.Contracts;
+using HRLeaveManagement.Application.Contracts.Persistence;
 using HRLeaveManagement.Domain;
 using MediatR;
 using System;
@@ -21,7 +21,7 @@ namespace HRLeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
             _leaveRequestRepository = leaveRequestRepository;
             _mapper = mapper;
         }
-        public async Task<Unit> Handle(DeleteLeaveRequestCommand request, CancellationToken cancellationToken)
+        public async Task Handle(DeleteLeaveRequestCommand request, CancellationToken cancellationToken)
         {
             var leaveRequest = await _leaveRequestRepository.Get(request.Id);
 
@@ -29,8 +29,6 @@ namespace HRLeaveManagement.Application.Features.LeaveRequests.Handlers.Commands
                 throw new NotFoundException(nameof(LeaveRequest), request.Id);
 
             await _leaveRequestRepository.Delete(leaveRequest);
-
-            return Unit.Value;
         }
     }
 }

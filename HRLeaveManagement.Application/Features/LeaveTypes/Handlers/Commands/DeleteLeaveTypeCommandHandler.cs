@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HRLeaveManagement.Application.Exceptions;
 using HRLeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
-using HRLeaveManagement.Application.Persistence.Contracts;
+using HRLeaveManagement.Application.Contracts.Persistence;
 using HRLeaveManagement.Domain;
 using MediatR;
 using System;
@@ -22,7 +22,7 @@ namespace HRLeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
             _mapper = mapper;
             
         }
-        public async Task<Unit> Handle(DeleteLeaveTypeCommand request, CancellationToken cancellationToken)
+        public async Task Handle(DeleteLeaveTypeCommand request, CancellationToken cancellationToken)
         {
             var leaveType = await _leaveTypeRepository.Get(request.Id);
 
@@ -31,7 +31,7 @@ namespace HRLeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
 
             await _leaveTypeRepository.Delete(leaveType);
 
-            return Unit.Value;
+            
         }
     }
 }
