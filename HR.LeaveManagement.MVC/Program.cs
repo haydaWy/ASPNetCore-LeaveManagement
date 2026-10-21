@@ -12,7 +12,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient<IClient, Client>(c1 => c1.BaseAddress = new Uri("http://localhost:5004"));
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddAutoMapper(
+    cfg => { },
+    Assembly.GetExecutingAssembly()
+);
+builder.Services.AddScoped<ILeaveTypeService, LeaveTypeService>();
 builder.Services.AddSingleton<ILocalStorageService, LocalStorageService>();
 
 
