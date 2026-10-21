@@ -9,7 +9,7 @@ using System.Text;
 
 namespace HR.LeaveManagement.Persistence
 {
-    public static class PersistanceServiceRegistration
+    public static class PersistenceServiceRegistration
     {
         public static IServiceCollection ConfigurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
